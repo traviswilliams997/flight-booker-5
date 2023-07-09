@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  DepartureAirport: 1
+  DestinationAirport: 1
+  Date: 2023-07-08
+  Time: 2023-07-08 23:55:56
+  Duration: 1
+
+two:
+  DepartureAirport: 1
+  DestinationAirport: 1
+  Date: 2023-07-08
+  Time: 2023-07-08 23:55:56
+  Duration: 1
