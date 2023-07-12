@@ -1,4 +1,6 @@
 class Flight < ApplicationRecord
+    has_many :bookings
+    has_many :passengers, through: :bookings
     belongs_to :DepartureAirport, class_name: "Airport"
     belongs_to :DestinationAirport, class_name: "Airport"
 

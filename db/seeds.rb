@@ -19,5 +19,5 @@
 #Flight.create!( Date: Time.new(2023, 7, 9, 20,0,0), Time: Time.new(2023, 7, 9, 20,0,0),  Duration: 1, DepartureAirport: a1, DestinationAirport: a2 )
 #Flight.create!(Date: Time.new(2023, 7, 10, 10,0,0), Time: Time.new(2023, 7, 10, 10,0,0), Duration: 2, DepartureAirport: a3, DestinationAirport: a4 )
 #Flight.create!(Date: Time.new(2023, 7, 10, 11,0,0), Time: Time.new(2023, 7, 10, 10,0,0), Duration: 3, DepartureAirport: a4, DestinationAirport: a1 )
-#light.create!(Date: Time.new(2023, 7, 10, 9,0,0), Time: Time.new(2023, 7, 10, 10,0,0), Duration: 3, DepartureAirport: a4, DestinationAirport: a1 )
+#light.create!(Date: Time.new(2023, 7, 10, 9,0,0), Time: Time.new(2023, 7, 10, 10,0,0), Duration: 2, DepartureAirport: a4, DestinationAirport: a1 )
 
