@@ -2,59 +2,24 @@
 
 <h1>Flights</h1>
 
-<div id="flights">
+<!-- <div id="flights">
   <% @flights.each do |flight| %>
-    <%= render flight.DepartureAirport %>
-     <%= render flight.DestinationAirport %>
+    <%= render flight %>
     
     <p>
-      <%= link_to "Show this flight", flight %>
+     <%= link_to "Show this flight", flight %>
     </p>
   <% end %>
 </div>
 
+
 <%= link_to "New flight", new_flight_path %>
+-->
 
 
-<%= form_with(model: @flight) do |form| %>
-  <% if @flight.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
+<%= render "search_form", flights: @flights %>
 
-      <ul>
-        <% @flight.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= render "search_results" %>
 
-  <div>
-    <%= form.label :DepartureAirport,  style: "display: block" %>
-    <%= form.number_field :DepartureAirport %>
-  </div>
 
-  <div>
-    <%= form.label :DestinationAirport, style: "display: block" %>
-    <%= form.number_field :DestinationAirport %>
-  </div>
 
-  <div>
-    <%= form.label :Date, style: "display: block" %>
-    <%= form.date_field :Date %>
-  </div>
-
-  <div>
-    <%= form.label :Time, style: "display: block" %>
-    <%= form.time_field :Time %>
-  </div>
-
-  <div>
-    <%= form.label :Duration, style: "display: block" %>
-    <%= form.number_field :Duration %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>

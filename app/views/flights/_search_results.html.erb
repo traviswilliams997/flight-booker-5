@@ -1,0 +1,24 @@
+ 
+<% if  @searched_flights.present? %> 
+ <p>
+    <strong>Departureairport:</strong>
+    <%= @departure_airport  %>
+  </p>
+
+  <p>
+    <strong>Destinationairport:</strong>
+    <%= @destination_airport %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%=  @departure_date  %>
+  </p>
+
+  <% else %>
+
+        <h4>No flights found, please try again.</h4>
+
+
+<%end%>
+

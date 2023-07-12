@@ -16,5 +16,5 @@
 #a2 = Airport.find_or_create_by(Code: "DFW")
 #a3 = Airport.find_or_create_by(Code: "DEN")
 #a4 = Airport.find_or_create_by(Code: "ORD")
-#Flight.create!( Date: Time.new(2023, 7, 9, 20,0,0).strftime("%d/%m/%Y"), Duration: 2, DepartureAirport: a1, DestinationAirport: a2 )
-#Flight.create!(Date: Time.new(2023, 7, 10, 10,0,0).strftime("%d/%m/%Y"), Duration: 2, DepartureAirport: a3, DestinationAirport: a4 )
+#Flight.create!( Date: Time.new(2023, 7, 9, 20,0,0), Time: Time.new(2023, 7, 9, 20,0,0),  Duration: 2, DepartureAirport: a1, DestinationAirport: a2 )
+#Flight.create!(Date: Time.new(2023, 7, 10, 10,0,0), Time: Time.new(2023, 7, 10, 10,0,0), Duration: 2, DepartureAirport: a3, DestinationAirport: a4 )
