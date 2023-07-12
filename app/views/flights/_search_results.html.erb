@@ -3,7 +3,7 @@
 
  <%= @searched_flights.to_a.to_s  %>
 
-   <%= form_with(model: @flight,  method: "get") do |form| %>
+   <%= form_with(model: @flight, url: new_booking_path, method: "get") do |form| %>
       <%= form.hidden_field :num_of_passengers, value: @num_of_passengers %>
 <p>
           <%= "Search results" %>
