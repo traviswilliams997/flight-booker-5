@@ -1,6 +1,47 @@
 <h1>New flight</h1>
 
-<%= render "form", flight: @flight %>
+<%= form_with(model: @flight) do |form| %>
+  <% if @flight.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
+
+      <ul>
+        <% @flight.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :DepartureAirport, style: "display: block" %>
+    <%= select_tag(:DepartureAirport_id, options_from_collection_for_select(@airports, "id", "Code"), include_blank: "From",) %>
+  </div>
+
+  <div>
+    <%= form.label :DestinationAirport, style: "display: block" %>
+        <%= select_tag(:DestinationAirport_id, options_from_collection_for_select(@airports, "id", "Code"),  include_blank: "To",) %>
+  </div>
+
+  <div>
+    <%= form.label :Date, style: "display: block" %>
+    <%= form.date_field :Date %>
+  </div>
+
+  <div>
+    <%= form.label :Time, style: "display: block" %>
+    <%= form.time_field :Time %>
+  </div>
+
+  <div>
+    <%= form.label :Duration, style: "display: block" %>
+    <%= form.number_field :Duration %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
 
 <br>
 
