@@ -17,6 +17,11 @@
           <%= select_tag(:Date, options_for_select(@days)) %>
   </div>
 
+  <div>
+    <%= form.label :Passengers, style: "display: block" %>
+          <%= select_tag(:Passengers, options_for_select(1..4)) %>
+  </div>
+
 
   <div>
     <%= form.submit "Search" %>

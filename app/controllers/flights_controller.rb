@@ -12,6 +12,7 @@ class FlightsController < ApplicationController
     @departure_airport = Airport.where(id: query_params[:DepartureAirport_id]).pluck(:Code).first
     @destination_airport = Airport.where(id: query_params[:DestinationAirport_id]).pluck(:Code).first
     @departure_date = query_params[:Date]
+    @num_of_passengers = query_params[:Passengers]
 
   end
 
@@ -81,6 +82,6 @@ class FlightsController < ApplicationController
 
     def query_params
       params.permit(:DepartureAirport_id, :DestinationAirport_id, 
-                    :Date, :commit, :authenticity_token)
+                    :Date, :commit, :authenticity_token, :Passengers)
     end
 end
