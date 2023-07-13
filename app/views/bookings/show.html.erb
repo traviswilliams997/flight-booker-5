@@ -1,0 +1,33 @@
+<p>Your flight has been booked!</p>
+<br>
+<div>
+<%= "#{@booking.flight.DepartureAirport.City} (#{@booking.flight.DepartureAirport.Code}) to
+              #{@booking.flight.DestinationAirport.City} (#{@booking.flight.DestinationAirport.Code})" %>
+              </div>
+
+              <div>
+        <%= "Departure: #{@booking.flight.Date} " %>
+      </div>
+      <div>
+        <%= "Duration: #{@booking.flight.Duration.to_i} hours" %>
+      </div>
+      <div>
+        <%= "Flight Number: #{@booking.flight.id}" %>
+      </div>
+
+
+      <% @booking.passengers.each_with_index do |passenger, passenger_number| %>
+        <% if @booking.passengers.count > 1 %>
+          <%= "Passenger #{passenger_number + 1} Information" %>
+        <% else %>
+          <%= "Passenger Information" %>
+        <% end %>
+
+
+          <%= "Name" %>
+          <div><%= passenger.name.titleize %></div>
+        
+
+        <%= "Email" %>
+        <div><%= passenger.email %></div>
+    <% end %>
